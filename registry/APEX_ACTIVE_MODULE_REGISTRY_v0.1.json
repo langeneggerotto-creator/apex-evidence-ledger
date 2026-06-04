@@ -1,0 +1,199 @@
+{
+  "registry_id": "APEX-ACTIVE-MODULE-REGISTRY-0001",
+  "version": "0.1.0",
+  "created_date": "2026-06-03",
+  "visibility_boundary": "PUBLIC_SAFE_ARCHITECTURE_AND_STATUS_ONLY",
+  "truth_boundary": "This registry records currently created repositories and designed module roles. It does not prove operational integrations, live data connections, validated benefits, digital twins, autonomy or deployment unless a separate evidence receipt supports the exact claim.",
+  "modules": [
+    {
+      "module_id": "MIRROR_CONTROL_PLANE",
+      "module_name": "APEX Mirror Control Plane",
+      "purpose_kernel": "Show current truth, evidence, benefit, blockers and human-controlled next actions across the APEX portfolio.",
+      "role": "Portfolio visibility and human-control surface",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-mirror-control-plane",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Portfolio framework specification", "Capability extraction specification", "Future interactive Mirror prototype"],
+      "first_proof_target": "MIRROR-PROTOTYPE-001 — interactive truth-labelled control-plane prototype using registered fixture data",
+      "dependencies": ["EVIDENCE_LEDGER", "ITERATION_AUTOMATER_OS", "LEARNING_CENTER", "ANALYTICS_MIRROR_SHAREPOINT", "OCODE"],
+      "next_gate": "Build and test a public-safe interactive prototype powered only by truth-labelled fixture/ledger records.",
+      "limitations": ["No live dashboard is proven from visual architecture alone.", "No module health percentages are currently measured."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "EVIDENCE_LEDGER",
+      "module_name": "APEX Evidence Ledger",
+      "purpose_kernel": "Preserve claim, evidence, validation, promotion and provenance records so no module status outruns proof.",
+      "role": "Evidence and provenance spine",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-evidence-ledger",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Module registry schema", "Evidence receipt schema", "Active module registry instance"],
+      "first_proof_target": "LEDGER-BUILD-001 — validate this registry and one evidence receipt using an automated test workflow",
+      "dependencies": [],
+      "next_gate": "Add validated example evidence receipt and CI schema validation.",
+      "limitations": ["Schemas and records do not by themselves establish live operational validation."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "ITERATION_AUTOMATER_OS",
+      "module_name": "APEX Iteration Automater OS",
+      "purpose_kernel": "Progress bounded, approved, evidence-gated work beneath the Mirror without removing human authority.",
+      "role": "Governed execution and convergence engine",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-iteration-automater-os",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Future work order contract", "C-infinity convergence records", "SGNUM+ output rules"],
+      "first_proof_target": "AUTOMATER-PILOT-001 — execute one bounded public-safe documentation/test task from an approved work order",
+      "dependencies": ["EVIDENCE_LEDGER", "MIRROR_CONTROL_PLANE"],
+      "next_gate": "Define work-order, stop-rule, evidence-output and human-approval contracts.",
+      "limitations": ["No autonomous execution authority is established.", "Proxy convergence is not real-world outcome proof."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "OCODE",
+      "module_name": "🅾️CODE / OCODE",
+      "purpose_kernel": "Define and bridge operational software through a simpler inspectable representation and validated target adapters.",
+      "role": "Bridging code and application generation module",
+      "maturity_status": "PROTOTYPE",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-ocode",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Module charter", "Bridge-intake prototype seed", "Future parser/renderer/adapters"],
+      "first_proof_target": "OCODE-PILOT-001 — Analytics Mirror HTML/JS to OCODE to web.singlefile round-trip comparison",
+      "dependencies": ["EVIDENCE_LEDGER", "ANALYTICS_MIRROR_SHAREPOINT", "TEST_WORKBENCH"],
+      "next_gate": "Implement and test a bounded OCODE-to-Web renderer and round-trip evidence packet.",
+      "limitations": ["Universal semantic source-to-target translation is not implemented.", "Run-anywhere portability is aspirational until adapter tests pass."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "LEARNING_CENTER",
+      "module_name": "APEX Learning Center",
+      "purpose_kernel": "Improve capability through targets, baselines, practice, transfer tests, governance and evidence-bearing evolution.",
+      "role": "Learning and human-AI capability proof laboratory",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-learning-center",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Learning Compass architecture", "PILOT-001 protocol", "Learning metric/evidence schema"],
+      "first_proof_target": "PILOT-001 — bounded Human-only vs AI-only vs Human+AI learning comparison",
+      "dependencies": ["EVIDENCE_LEDGER", "TEST_WORKBENCH", "PHD_RESEARCH"],
+      "next_gate": "Commit a public-safe pilot specification with measurable outcomes and governance controls.",
+      "limitations": ["Learning digital twin capability is not calibrated or validated.", "Visual learning architecture is not measured learner evidence."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "ANALYTICS_MIRROR_SHAREPOINT",
+      "module_name": "APEX Analytics Mirror SharePoint Module",
+      "purpose_kernel": "Create a Centralized Analytics Program command center for dashboards, governance, KPI definitions, requests, learning and oversight.",
+      "role": "Business-facing analytics and data governance application",
+      "maturity_status": "PROTOTYPE",
+      "repository_decision": {
+        "status": "DEDICATED_REPOSITORY_EXISTS",
+        "repository": "langeneggerotto-creator/apex-analytics-mirror-sharepoint",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Clickable SharePoint-style prototype", "Functional and technical specification", "Future deployment mapping"],
+      "first_proof_target": "ANM-BUILD-002 — graph-rich selectable-layout 11D modeling-depth prototype with evidence labels",
+      "dependencies": ["MIRROR_CONTROL_PLANE", "EVIDENCE_LEDGER", "LEARNING_CENTER", "OCODE", "TEST_WORKBENCH"],
+      "next_gate": "Seed implementation specification and test prototype interactions against declared gates.",
+      "limitations": ["The interactive mockup is not deployed to SharePoint.", "Displayed program data must remain demo-labelled until real approved sources are connected."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "PERFECT_ANALYSIS",
+      "module_name": "APEX Perfect Analysis",
+      "purpose_kernel": "Analyze truth, gaps, waste, options, benefit and next-best governed direction for any active module.",
+      "role": "Analysis and decision intelligence function",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "REGISTERED_UNDER_CONTROL_PLANE",
+        "repository": "langeneggerotto-creator/apex-mirror-control-plane",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Analysis packet", "Gap map", "Option ranking", "Final Direction Stack"],
+      "first_proof_target": "ANA-PILOT-001 — analyze the Analytics Mirror prototype using defined truth and payoff criteria",
+      "dependencies": ["EVIDENCE_LEDGER", "MIRROR_CONTROL_PLANE"],
+      "next_gate": "Define analysis packet schema and run one bounded comparative review.",
+      "limitations": ["No executable analysis engine or validated scoring model yet exists."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "PHD_RESEARCH",
+      "module_name": "APEX PhD Research",
+      "purpose_kernel": "Convert bounded questions into cited, evidence-graded research packets that inform requirements and tests.",
+      "role": "Research and evidence discovery function",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "REGISTERED_UNDER_CONTROL_PLANE",
+        "repository": "langeneggerotto-creator/apex-mirror-control-plane",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Research packet", "Source ledger", "Evidence grades", "Research-to-feature implications"],
+      "first_proof_target": "RES-PILOT-001 — evidence-graded adaptive learning methods packet for Learning Center design",
+      "dependencies": ["EVIDENCE_LEDGER", "LEARNING_CENTER"],
+      "next_gate": "Define research packet schema and complete one source-cited bounded research output.",
+      "limitations": ["Concept visual status indicators are not proof of active research streams."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "DIMENSIONS_FIELDS",
+      "module_name": "APEX Dimensions & Fields",
+      "purpose_kernel": "Provide a consistent system-modeling vocabulary from observation through governance, prediction and unified-model vision.",
+      "role": "Dimensional ontology and modeling-depth function",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "REGISTERED_UNDER_CONTROL_PLANE",
+        "repository": "langeneggerotto-creator/apex-mirror-control-plane",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Ontology registry", "Parameter map", "Module dimensional mapping", "Boundary statement"],
+      "first_proof_target": "DIM-PILOT-001 — map the Analytics Mirror module through applicable modeling-depth layers",
+      "dependencies": ["EVIDENCE_LEDGER", "ANALYTICS_MIRROR_SHAREPOINT"],
+      "next_gate": "Create ontology registry and one public-safe module mapping.",
+      "limitations": ["Dimensions are a system-modeling/maturity framework, not a validated claim of physical higher-dimensional operation."],
+      "final_direction_stack_required": true
+    },
+    {
+      "module_id": "TEST_WORKBENCH",
+      "module_name": "APEX Test Workbench",
+      "purpose_kernel": "Challenge module artifacts against acceptance gates, expose failures and prevent unsupported promotion.",
+      "role": "Cross-module validation and promotion-control function",
+      "maturity_status": "DESIGNED_NOT_PROVEN",
+      "repository_decision": {
+        "status": "REGISTERED_UNDER_CONTROL_PLANE",
+        "repository": "langeneggerotto-creator/apex-mirror-control-plane",
+        "visibility": "PUBLIC",
+        "public_safe_only": true
+      },
+      "primary_outputs": ["Test packet", "Validation result", "Repair queue", "Promotion recommendation"],
+      "first_proof_target": "TST-PILOT-001 — test Analytics Mirror prototype interaction and truth-labelling gates",
+      "dependencies": ["EVIDENCE_LEDGER", "ANALYTICS_MIRROR_SHAREPOINT", "LEARNING_CENTER", "OCODE"],
+      "next_gate": "Define test-result schema and run one deterministic public-safe validation packet.",
+      "limitations": ["No reusable executable cross-module test runner is currently proven."],
+      "final_direction_stack_required": true
+    }
+  ]
+}
