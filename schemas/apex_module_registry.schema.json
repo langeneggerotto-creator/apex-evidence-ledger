@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apex.local/schemas/apex_module_registry.schema.json",
+  "title": "APEX Module Registry Schema",
+  "description": "Public-safe contract for identifying APEX development modules, their role, truth status, repository home, dependencies and next evidence gate.",
+  "type": "object",
+  "required": ["registry_id", "version", "created_date", "truth_boundary", "modules"],
+  "properties": {
+    "registry_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "minLength": 1 },
+    "created_date": { "type": "string", "format": "date" },
+    "visibility_boundary": { "type": "string" },
+    "truth_boundary": { "type": "string", "minLength": 1 },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "module_id",
+          "module_name",
+          "purpose_kernel",
+          "role",
+          "maturity_status",
+          "repository_decision",
+          "first_proof_target",
+          "dependencies",
+          "next_gate"
+        ],
+        "properties": {
+          "module_id": { "type": "string", "pattern": "^[A-Z0-9_-]+$" },
+          "module_name": { "type": "string", "minLength": 1 },
+          "purpose_kernel": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "minLength": 1 },
+          "maturity_status": {
+            "enum": [
+              "VERIFIED",
+              "INFERRED",
+              "DESIGNED_NOT_PROVEN",
+              "PROTOTYPE",
+              "TESTED",
+              "BLOCKED",
+              "ASPIRATIONAL"
+            ]
+          },
+          "repository_decision": {
+            "type": "object",
+            "required": ["status", "repository"],
+            "properties": {
+              "status": { "enum": ["DEDICATED_REPOSITORY_EXISTS", "REGISTERED_UNDER_CONTROL_PLANE", "FUTURE_REPOSITORY_CANDIDATE"] },
+              "repository": { "type": ["string", "null"] },
+              "visibility": { "enum": ["PUBLIC", "PRIVATE", "NOT_APPLICABLE", "UNKNOWN"] },
+              "public_safe_only": { "type": "boolean" }
+            }
+          },
+          "primary_outputs": { "type": "array", "items": { "type": "string" } },
+          "first_proof_target": { "type": "string", "minLength": 1 },
+          "dependencies": { "type": "array", "items": { "type": "string" } },
+          "next_gate": { "type": "string", "minLength": 1 },
+          "limitations": { "type": "array", "items": { "type": "string" } },
+          "final_direction_stack_required": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
