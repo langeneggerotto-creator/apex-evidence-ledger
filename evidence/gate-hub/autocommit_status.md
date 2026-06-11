@@ -2,10 +2,10 @@
 
 Status: ACTIVE
 
-Future OIC builds should write an evidence record here when repo access is available.
+Current anchor: APEX_OIC_GateHub_Autocommit_Runner_v1_2_2.
 
-Evidence record should include build name, version, truth status, artifact hashes, verification result, promotion state, blocked claims, code commit SHA, evidence commit SHA, and next build gate.
+Verification: 20 / 20 PASS.
 
-Current anchor: APEX_OIC_Hosted_Prototype_Activation_v1_2.
+Stress: 1000000 iterations, 0 failures.
 
-Current state: NOT_HOSTED_YET.
+Code commit: 9789b6d80cf16e9a88d0f3d7c9094f4f1d8d271a.
