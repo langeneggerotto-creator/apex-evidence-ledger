@@ -1,0 +1,37 @@
+{
+  "registry_id": "APEX-ACTIVE-GAPS-REGISTRY-v0.1",
+  "status": "INITIALIZED",
+  "truth_boundary": "This registry defines candidate gaps for autonomous evidence review. It does not prove gap reduction until evidence receipts are generated and preserved.",
+  "active_gaps": [
+    {
+      "gap_id": "GAP-OCODE-RUNTIME-001",
+      "gap_name": "OCODE runtime proof gap",
+      "current_state": "OCODE syntax and examples exist, but no fully verified parser-renderer-evidence loop is proven in this repository.",
+      "desired_state": "One .ocode page parses, renders in browser, supports interaction, produces evidence receipt, and records test result.",
+      "why_it_matters": "OCODE must prove one bounded runtime loop before it can be treated as more than a language concept.",
+      "priority_score": 86,
+      "priority_basis": {
+        "purpose_impact": 9,
+        "evidence_gain": 10,
+        "risk_reduction": 8,
+        "human_control_gain": 8,
+        "dependency_unlock": 9,
+        "learning_value": 9,
+        "execution_feasibility": 8,
+        "hype_risk_penalty": -5
+      },
+      "evidence_needed": [
+        "runtime file existence evidence",
+        "example .ocode file existence evidence",
+        "test plan existence evidence",
+        "test result or validation log",
+        "commit SHA preserving evidence"
+      ],
+      "safe_test_available": true,
+      "last_evidence_receipt": null,
+      "current_confidence": 0.15,
+      "truth_status": "DESIGNED_NOT_PROVEN",
+      "next_smallest_action": "Create the first Daily Gap Governor evidence receipt and preserve it in GitHub."
+    }
+  ]
+}
