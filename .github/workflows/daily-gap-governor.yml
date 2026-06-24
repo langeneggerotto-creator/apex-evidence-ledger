@@ -1,0 +1,36 @@
+name: Daily Gap Governor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  run-daily-gap-governor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Daily Gap Governor
+        run: python tools/daily_gap_governor_runner.py
+
+      - name: Commit generated evidence if changed
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            git config user.name "apex-daily-gap-governor"
+            git config user.email "actions@github.com"
+            git add daily_receipts logs
+            git commit -m "Daily Gap Governor evidence receipt"
+            git push
+          else
+            echo "No evidence changes detected."
+          fi
