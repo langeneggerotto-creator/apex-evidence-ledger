@@ -1,0 +1,29 @@
+{
+  "receipt_id": "APEX-DGG-2026-07-02-GAP-OCODE-RUNTIME-001",
+  "created_utc": "2026-07-02T15:19:19.348050+00:00",
+  "gap_id": "GAP-OCODE-RUNTIME-001",
+  "baseline_yesterday": "OCODE syntax and examples exist, but no fully verified parser-renderer-evidence loop is proven in this repository.",
+  "current_state_today": "Safe repository checks completed by Daily Gap Governor runner.",
+  "what_changed": "A receipt was generated from safe file-existence checks.",
+  "evidence_link_or_file": [
+    "gaps/active_gaps.json",
+    "tests/daily_gap_governor_test_plan.md",
+    "decisions/latest_next_smallest_action.md",
+    "daily_receipts/2026-07-02_GAP-OCODE-RUNTIME-001_receipt.json"
+  ],
+  "safe_checks": {
+    "active_gap_registry_exists": true,
+    "test_plan_exists": true,
+    "next_action_exists": true,
+    "receipt_folder_exists": true
+  },
+  "confidence_change": "+0.00 until human review or CI evidence confirms movement",
+  "next_smallest_action": "Create the first Daily Gap Governor evidence receipt and preserve it in GitHub.",
+  "truth_status": "TESTED_IN_SCOPE",
+  "scale_state": "LOCKED",
+  "limitations": [
+    "This receipt proves only that the runner performed safe repository checks.",
+    "It does not prove the OCODE runtime parser-renderer loop.",
+    "It does not unlock scale mode."
+  ]
+}
