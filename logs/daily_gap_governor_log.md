@@ -146,3 +146,10 @@ Selected gap: GAP-OCODE-RUNTIME-001
 Receipt: daily_receipts/2026-07-12_GAP-OCODE-RUNTIME-001_receipt.json
 Truth status: TESTED_IN_SCOPE
 Scale state: LOCKED
+
+## Daily Gap Governor run
+Date: 2026-07-13
+Selected gap: GAP-OCODE-RUNTIME-001
+Receipt: daily_receipts/2026-07-13_GAP-OCODE-RUNTIME-001_receipt.json
+Truth status: TESTED_IN_SCOPE
+Scale state: LOCKED
